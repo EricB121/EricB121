@@ -2,18 +2,83 @@
 <html>
     <head>
          <title>Eric Brennans Website</title>
+         <style>
+          body {
+              background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200621/pngtree-abstract-modern-neon-frame-background-image_339537.jpg);
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+  background-position: center;
+  background-size:1600px 810px;
+          }
+          #all-contents {
+            max-width: 800px;
+              margin: auto;
+          }
+       
+          /* navigation menu */
+          nav {
+              background: rgb(0, 183, 255);
+             margin: 120px;
+             margin-bottom: 20px;
+              display: flex;
+              padding: 10px;
+              
+          }
+          h1 {
+              display: flex;
+              align-items: center;
+              color: rgb(0, 0, 0);
+              flex: 1;
+              margin: 0;
+          }
+          #nav-ul {
+              list-style-image: none;
+          }
+          .nav-li {
+              display: inline-block;
+              padding: 0 10px;
+          }
+          a {
+              text-decoration: none;
+              color: rgb(0, 0, 0);
+          }
+       
+          /* main container area beneath menu */
+          main {
+              background: rgb(244, 0, 171);
+              display: flex;
+          }
+          .sidebar {
+              margin-right: 25px;
+              padding: 10px;
+          }
+          .sidebar-img {
+              width: 300px;
+          }
+          .content {
+              flex: 1;
+              padding: 15px;
+          }
+          #interests {
+              border: 4px silver ridge;
+              padding: 8px;
+          }
+          h2, h3 {
+              margin: 0px;
+          }
+       </style>
     </head>
     
     <body>
         <!-- Visible HTML elements GO HERE  -->
-          <div>
+          <div id="all-contents">
               <nav>
                 <h1>Eric's Glorious Website</h1>
-                <ul>
-                    <li>
-                      <a href="https://5500-ericb121-ericb121-omsibgrlc31.ws-us61.gitpod.io/index.html"> Home </a>
+                <ul id="nav-ul">
+                    <li class="nav-li">
+                      <a href="https://5500-ericb121-ericb121-omsibgrlc31.ws-us62.gitpod.io/index.html"> Home </a>
                     </li>
-                    <li>
+                    <li class="nav-li">
                       <a href="https://www.stcharles.k12.la.us/HAHNVILLE"> Portfolio </a>
                     </li>
                 </ul>
@@ -21,16 +86,16 @@
 
               <main>
                     <!-- Sidebar section -->
-                    <div>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4PLjnPd4weFL0Aol7_CgZ3IoMXQt4Ty29jhx2Yzd3Zb2kiqV8YgUNTvXVtAbH3YtE-Tc:https://static.wikia.nocookie.net/minecraft_gamepedia/images/4/48/Piglin_Brute_attacking.png/revision/latest/scale-to-width-down/907%3Fcb%3D20210811021017&usqp=CAU">
+                    <div class="sidebar">
+                        <img class="sidebar-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR28rNnUvkp1HTTXeOIa-Nwh1nJq6AvvNO5PQ:https://i5.walmartimages.com/asr/27653a00-bc4d-4d00-a185-f35dfa100531.a106ce32a13eab4e39148cdef4e26fc2.jpeg%3FodnHeight%3D612%26odnWidth%3D612%26odnBg%3DFFFFFF&usqp=CAU">
                     </div>
 
                     <!-- Content section -->
-                    <div>
+                    <div class="content">
                     <h2>Eric Brennan</h2>
                     <p>Student at Hahnville high</p>
                            <!-- Interests section -->
-                            <div>
+                            <div id="interests">
                             <h3>Interests</h3>
                             <ul>
                                 <li>solving rubix cubes</li>
