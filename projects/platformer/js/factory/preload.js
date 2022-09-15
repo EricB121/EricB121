@@ -20,6 +20,6 @@
         //game.load.image('max', './asset/collectable/max-head.png');
         game.load.image('max', './asset/collectable/shrekyboi2.png');
         //game.load.atlas('halle', './asset/halle/phaser-json-array/halle.png', './asset/halle/phaser-json-array/halle.json');
-        game.load.atlas('halle', './asset/halle/phaser-json-array/halle4.png', './asset/halle/phaser-json-array/halle.json');
+        game.load.atlas('halle', './asset/halle/phaser-json-array/k.jpg', './asset/halle/phaser-json-array/halle.json');
     };
 })(window);
