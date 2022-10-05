@@ -8,22 +8,27 @@ body {
 hr {
     
 }
+a span{
+    background-color: #f9a303;
+    border: 3px;
+  }
 /* unvisited link */
 a:link {
-    color: rgb(0, 0, 0);
+    color: rgb(201, 10, 10);
   }
   
   /* visited link */
   a:visited {
-    color: rgb(0, 0, 0);
+    color: rgb(201, 10, 10);
   }
   
   /* mouse over link */
   a:hover {
-    color: red;
+    color: rgb(255, 255, 255);
   }
   
   /* selected link */
   a:active {
     color: yellow;
   }
+ 
