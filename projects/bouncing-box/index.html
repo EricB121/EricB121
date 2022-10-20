@@ -6,19 +6,26 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
+			width: 76px;
 			height: 70px;
-			background-color: teal;
+			background-image: url("images/zom2.png");
 			font-size: 300%;
 			text-align: center;
 			display: block;
 			position: absolute;
-			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			top: 50px;
+			left: 50px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
 		}
+		body {
+ background-image: url("images/hi.jpg");
+ background-repeat: no-repeat;
+ background-size: 1520px 750px;
+ background-color: #f90303;
+ display: block;
+}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
 
@@ -64,10 +71,14 @@
 			// TODO 2 - Variable declarations 
 			
 var positionX = 0;
-var positionY = 0;
+
 var points = 0;
+
 var speed = 10;
-var speedY = 10;
+
+var positionY = 0;
+
+var speedY = 0;
 		
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
