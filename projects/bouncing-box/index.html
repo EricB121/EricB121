@@ -15,15 +15,16 @@
 			position: absolute;
 			top: 50px;
 			left: 50px;  /* <--- Change me! */
+			color:white;
 		}
 		.board{
-			height: 100vh;
+			height: 94hv;
 		}
 		body {
  background-image: url("images/hi.jpg");
  background-repeat: no-repeat;
- background-size: 1520px 750px;
- background-color: #f90303;
+ background-size: cover;
+ background-color: #037aad;
  display: block;
 }
 	</style>
@@ -78,7 +79,7 @@ var speed = 10;
 
 var positionY = 0;
 
-var speedY = 0;
+var speedY = 13;
 		
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -88,16 +89,24 @@ var speedY = 0;
 			function update(){
 				
 				positionX = positionX + speed;
-				
+				positionY = positionY + speedY;
 
 				moveBoxTo(positionX, positionY);
 		
-				if (positionX >= boardWidth){
+				if (positionX >= boardWidth -76){
 					speed = -speed;
 				}
 			if (positionX < 0){
 				speed = -speed;
 			}	
+			
+			if (positionY >= boardHeight -76){
+					speedY = -speedY;
+				}
+			if (positionY < 0){
+				speedY = -speedY;
+			}	
+			var randNum = Math.random(0)  * 100;
 		}
  // TODO 2 - Variable declarations 
 
