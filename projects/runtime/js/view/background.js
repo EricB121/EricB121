@@ -36,21 +36,48 @@ var background = function (window) {
             // TODO: 2 - Part 2
             // this fills the background with a obnoxious yellow
             // you should modify this to suit your game
-            var backgroundFill = draw.rect(canvasWidth,canvasHeight,'yellow');
+            var backgroundFill = draw.rect(canvasWidth,canvasHeight,'black');
             background.addChild(backgroundFill);
             
             // TODO: 3 - Add a moon and starfield
-            
-            
+            for (var i = 0; i< 1000; i++) {
+            //  var circle = draw.circle(10, "white", "LightGray", 2);
+             var circle = draw.bitmap("img/starm4.png");
+        circle.x = canvasWidth * Math.random();
+        circle.y = groundY * Math.random();
+        background.addChild(circle);
+        }
+
+            var moon = draw.bitmap("img/minecr3.jpg");
+moon.x = 900;
+moon.y = 200;
+moon.scale = 1.0;
+moon.scaleY = 1.0;
+background.addChild(moon);
+
             // TODO 5: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
-            
+            for (var i = 0; i < 5; ++i) {
+                var buildingHeight = 254;
+                // var building = draw.rect(75, buildingHeight, "LightGray", "Black", 1);
+                // var building = draw.bitmap("img/home2.png");
+                building.x = 200 * i;
+                building.y = groundY - buildingHeight;
+                background.addChild(building);
+                // buildings.push(building);
+              }
             
             // TODO 4: Part 1 - Add a tree
-            
-            
+            building.x = 200;
+             building.y = groundY - 164;
+             background.addChild(building);
+
+            tree.x = 200;
+            tree.y = groundY - 224;
+            background.addChild(tree);
+
         } // end of render function - DO NOT DELETE
-        
-        
+        var tree = draw.bitmap("img/treek2.png");
+        var building = draw.bitmap("img/homer4.png");
         // Perform background animation
         // called on each timer "tick" - 60 times per second
         function update() {
@@ -60,10 +87,18 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 4: Part 2 - Move the tree!
-            
+            tree.x = tree.x - 2.5;
+
+            if (tree.x < -200) {
+            tree.x = canvasWidth;
+            }
             
             // TODO 5: Part 2 - Parallax
-            
+            building.x = building.x - 1.0;
+
+            if (building.x < -200) {
+            building.x = canvasWidth;
+            }
 
         } // end of update function - DO NOT DELETE
         
